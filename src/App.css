@@ -1,0 +1,130 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.khatra-header{
+  background-color: red;
+  border-radius: 8px;
+  padding:0.3rem 1rem;
+  color:white;
+}
+
+.filter-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.filter-pill {
+  position: relative;
+  text-align: center;
+  border-radius: 8px;
+  padding: 0.4rem 1.2rem;
+  font-size: 1em;
+  font-weight: 500;
+  background-color: #1a1a1a;
+  color: white;
+  cursor: pointer;
+  z-index: 2;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.filter-pill > .active-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: red;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  z-index: -1;
+  scale: 1.02;
+}
+
+.filter-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin: 2rem 0;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+}
+
+.filter-card {
+  max-width: 500px;
+  position: relative;
+  text-align: left;
+}
+
+.filter-card > img {
+  max-width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+.filter-card > .description > p {
+  color: gray;
+}
+
+.no-movies {
+  width: 100%;
+  min-width: fit-content;
+  height: auto;
+  min-height: 300px;
+  padding: 1rem;
+  text-align: center;
+  display: grid;
+  place-items: center;
+}
+
+.pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  list-style-type: none;
+  flex-wrap: wrap;
+}
+
+.pagination-container::-webkit-scrollbar {
+  display: none;
+}
+
+.number-pill {
+  background: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-height: 0;
+  padding: 0.4rem 0.8rem;
+  height: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.page-link {
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  height: 100%;
+}
+.page-link:hover:not(.active) {
+  text-decoration: none;
+  color: red;
+}
+
+.number-pill.active {
+  background: red;
+}
