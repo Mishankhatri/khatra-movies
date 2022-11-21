@@ -46,6 +46,8 @@ const MovieFilterContainer = () => {
         containerClassName="pagination-container"
         activeClassName="active"
         renderOnZeroPageCount={null}
+        disabledClassName="disabled-prev-next"
+        disabledLinkClassName="disabled-link"
       />
     </div>
   );
