@@ -9,6 +9,7 @@ const FilterBar = ({ filterId, setFilterId }) => {
         <div
           className={`filter-pill`}
           onClick={() => setFilterId(filterPill?.id)}
+          key={filterPill?.id}
         >
           <span>{filterPill?.name}</span>
           {filterId === filterPill?.id ? (

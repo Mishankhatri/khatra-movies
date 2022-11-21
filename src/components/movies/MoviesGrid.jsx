@@ -18,7 +18,7 @@ const MoviesGrid = ({ movies }) => {
     <div className="filter-card-grid">
       {movies && movies.length > 0 ? (
         movies.map((movie) => (
-          <AnimatePresence>
+          <AnimatePresence key={movie?.id}>
             <motion.div
               layout
               key={movie.id}
